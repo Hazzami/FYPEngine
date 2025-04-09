@@ -12,6 +12,8 @@ namespace FYPEngine
 		SDL_Window* m_raw;
 		SDL_Renderer* m_renderer;
 		std::weak_ptr<Core> m_core;
+		int m_winw = 960;
+		int m_winh = 540;
 
 	public:
 		Window();
@@ -20,5 +22,8 @@ namespace FYPEngine
 		std::shared_ptr<Core> getCore();
 		SDL_Renderer* getRenderer();
 		void initRenderer();
+		int getWinW();
+		int getWinH();
+		void update();
 	};
 }

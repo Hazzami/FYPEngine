@@ -6,12 +6,9 @@ namespace FYPEngine
 {
 	Window::Window()
 	{
-		int winw = 960;
-		int winh = 540;
-
 		m_raw = SDL_CreateWindow("EngineDemo",
 			SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED,
-			winw, winh, SDL_WINDOW_RESIZABLE);
+			m_winw, m_winh, NULL);
 
 		if (!m_raw)
 		{
@@ -43,5 +40,20 @@ namespace FYPEngine
 	void Window::initRenderer()
 	{
 		m_renderer = SDL_CreateRenderer(m_raw, -1, 0);
+	}
+
+	int Window::getWinW()
+	{
+		return m_winw;
+	}
+
+	int Window::getWinH()
+	{
+		return m_winh;
+	}
+
+	void Window::update()
+	{
+		SDL_GetWindowSize(m_raw, &m_winw, &m_winh);
 	}
 }

@@ -13,7 +13,7 @@ namespace FYPEngine
 		m_y = 0;
 		m_width = 100;
 		m_height = 100;
-		m_path = "C:/Users/harry/Documents/FYP2025/EngineSource/FYPEngine/build/Debug/default.bmp";
+		m_path = "build/Debug/default.bmp";
 
 	}
 
@@ -49,4 +49,13 @@ namespace FYPEngine
 	{
 		return m_entity.lock();
 	}
+
+	void Texture::setBox(int _x, int _y, int _w, int _h)
+	{
+		m_x = _x;
+		m_y = _y;
+		m_width = _w;
+		m_height = _h;
+	}
+
 }

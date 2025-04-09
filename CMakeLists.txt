@@ -28,6 +28,17 @@ add_library(FYPEngine
   src/FYPEngine/WorldObject.cpp
   src/FYPEngine/ParallaxObject.cpp
   src/FYPEngine/Texture.cpp
+  src/FYPEngine/GUI.cpp
+  src/FYPEngine/GUIElement.cpp
+  src/FYPEngine/GUIFrame.cpp
+  src/FYPEngine/EngineGUI.cpp
+  src/FYPEngine/EngineGUIElement.cpp
+  src/FYPEngine/EngineGUIFrame.cpp
+  src/FYPEngine/EngineGUIContent.cpp
+  src/FYPEngine/EngineGUIObject.cpp
+  src/FYPEngine/EngineGUIAttrib.cpp
+  src/FYPEngine/EngineGUIButton.cpp
+  src/FYPEngine/EngineGUITexture.cpp
 
   src/FYPEngine/FYPEngine.h
   src/FYPEngine/Entity.h
@@ -44,8 +55,20 @@ add_library(FYPEngine
   src/FYPEngine/WorldObject.h
   src/FYPEngine/ParallaxObject.h
   src/FYPEngine/Texture.h
+  src/FYPEngine/GUI.h
+  src/FYPEngine/GUIElement.h
+  src/FYPEngine/GUIFrame.h
+  src/FYPEngine/EngineGUI.h
+  src/FYPEngine/EngineGUIElement.h
+  src/FYPEngine/EngineGUIFrame.h
+  src/FYPEngine/EngineGUIContent.h
+  src/FYPEngine/EngineGUIObject.h
+  src/FYPEngine/EngineGUIAttrib.h
+  src/FYPEngine/EngineGUIButton.h
+  src/FYPEngine/EngineGUITexture.h
+  src/FYPEngine/Attribute.h
 )
-target_link_libraries(FYPEngine glew32 SDL2 opengl32 fltk fltk_forms fltk_gl fltk_images fltk_png fltk_jpeg fltk_z comctl32 gdi32 ole32 uuid)
+target_link_libraries(FYPEngine glew32 SDL2 opengl32 SDL2_ttf)
 
 add_executable(UI
   src/UI/main.cpp

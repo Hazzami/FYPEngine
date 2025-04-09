@@ -5,16 +5,17 @@
 
 namespace FYPEngine
 {
-	struct Entity;
+	struct EngineGUIObject;
 
-	struct Texture
+
+	struct EngineGUITexture
 	{
 	private:
-		friend struct Entity;
+		friend struct EngineGUIObject;
 		const char* m_path;
 		SDL_Surface* m_image;
 		SDL_Texture* m_texture;
-		std::weak_ptr<Entity> m_entity;
+		std::weak_ptr<EngineGUIObject> m_object;
 		int m_width;
 		int m_height;
 		int m_x;
@@ -29,7 +30,8 @@ namespace FYPEngine
 		void setTexture();
 		void loadImage(const char* _path);
 		const char* getPath();
-		std::shared_ptr<Entity> getEntity();
 		void setBox(int _x, int _y, int _w, int _h);
+		std::shared_ptr<EngineGUIObject> getObject();
+		void flipTexture(int _dir);
 	};
 }
